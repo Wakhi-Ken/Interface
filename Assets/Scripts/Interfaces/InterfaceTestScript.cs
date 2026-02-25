@@ -13,8 +13,13 @@ public class InterfaceTestScript : MonoBehaviour
         IShape nonagon = new Nonagon();
 
         Debug.Log("Trapezium Area: " + trapezium.CalculateArea());
+        Debug.Log("Trapezium Perimeter: " + trapezium.CalculatePerimeter());
+
         Debug.Log("Circle Area: " + circle.CalculateArea());
+        Debug.Log("Circle Perimeter: " + circle.CalculatePerimeter());
+
         Debug.Log("Nonagon Area: " + nonagon.CalculateArea());
+        Debug.Log("Nonagon Perimeter: " + nonagon.CalculatePerimeter());
     }
 
     // Update is called once per frame
@@ -33,11 +38,11 @@ public interface IShape
 public class Trapezium : IShape
 {
 
-    float base1 = 5f;
+    float base1 = 10f;
     float base2 = 7f;
-    float height = 4f;
-    float side1 = 3f;
-    float side2 = 6f;
+    float height = 9f;
+    float side1 = 4f;
+    float side2 = 7f;
 
     public void CalculateUnknownSides()
     {
@@ -58,7 +63,7 @@ public class Trapezium : IShape
 public class Circle : IShape
 {
 
-    float radius = 3f;
+    float radius = 5f;
 
     public float CalculateArea()
     {
@@ -79,11 +84,11 @@ public class Circle : IShape
 public class Nonagon : IShape
 {
     int numberOfSides = 9;
-    float sideLength = 4f;
+    float sideLength = 6f;
 
     public float CalculateArea()
     {
-        return 100f;
+        return 150f;
     }
 
     public float CalculatePerimeter()
